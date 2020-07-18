@@ -22,11 +22,6 @@ body {
         font-size:40px; 
       }
       
-      .up ul li:hover{
-        color:orange;
-        
-      }      
-
 .start {
         color: white;
         font-weight: 300;
@@ -75,6 +70,11 @@ body {
       background-color: lightblue;
       box-shadow: 0 12px 16px 0 rgb(221, 214, 119),0 17px 50px 0 rgba(0,0,0,0.19);
     }
+
 a {
       text-decoration: none!important;
+}
+
+a:hover {
+      color: orange;
 }
