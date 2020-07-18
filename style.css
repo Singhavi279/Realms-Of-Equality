@@ -11,6 +11,7 @@ body {
         background-image:url(top.jpg);
         background-size: cover;
         background-attachment: fixed;
+        padding: 15%;
 }
  
 .task1{
