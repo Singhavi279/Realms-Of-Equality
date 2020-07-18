@@ -9,10 +9,14 @@ body {
  
 .task1{
        text-align: left;
-       margin-left: 20%;
+       margin-left: 15px%;
       }
 
 .task2{
        text-align: left;
-       margin-left: 20%;
+       margin-left: 15px;
        } 
+
+.about {
+      width: 70%;
+}
