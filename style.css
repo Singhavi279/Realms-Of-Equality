@@ -29,21 +29,25 @@ body {
         background-size: cover;
         background-attachment: fixed;
         padding: 15%;
+        margin-bottom: 25px;
 }
  
 .task1{
        text-align: left;
        padding-left: 7%;
+       margin-bottom: 10px;
       }
 
 .task2{
        text-align: left;
        padding-left: 7%;
+       margin-bottom: 25px;
        } 
 
 #about {
       margin-left: 10%;
       margin-right: 10%;
+      margin-bottom: 25px;
       text-align: left;
 }
 
