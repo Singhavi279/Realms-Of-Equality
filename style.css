@@ -9,9 +9,9 @@ body {
         color: white;
         font-weight: 300;
         background-image:url(top.jpg);
-        background-size: initial;
+        background-size: cover;
         background-attachment: fixed;
-        padding: 25%;
+        padding: 15%;
 }
  
 .task1{
