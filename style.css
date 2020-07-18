@@ -9,7 +9,7 @@ body {
         color: white;
         font-weight: 300;
         background-image:url(top.jpg);
-        background-size: cover;
+        background-size: initial;
         background-attachment: fixed;
         padding: 25%;
 }
