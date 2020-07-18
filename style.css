@@ -6,6 +6,8 @@ body {
       }
 
 .start {
+        color: white;
+        font-weight: 300;
         background-image:url(top.jpg);
         background-size: auto;
         background-attachment: fixed;
