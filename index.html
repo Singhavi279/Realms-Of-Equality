@@ -9,28 +9,82 @@
     <link rel="stylesheet" type="text/css" href="team.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Realms Of Equality</title>
+    <!-- nav style -->
+    <style>
+        
+      .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+      }
+      
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      
+      .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+      }
+      
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .overlay {overflow-y: auto;}
+        .overlay a {font-size: 20px}
+        .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        }
+      }
+      </style>
+
 </head>
 
 <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-    <div class="container">
-        <div class="logo">
-          <img src="pp.jpg" alt="logo1" height="130" width="130">
-          <img src="gpf.png" alt="logo2" height="120" width="260">
-          </div>
-        <nav>
-            <div class="up">
-                <ul>
-                    <li><a href="index.html">Home</a></li> 
-                    <li><a href="#about">About Us</a></li> 
-                    <li><a href="#article">Articles</a></li> 
-                    <li><a href="#contact">Learn More</a></li> 
-                    </ul>
-            </div>
-          </nav>
-        </div>
-        <hr>
+    <!-- new nav -->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#article">Articles</a>
+        <a href="#Survey">Surveys</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Learn More</a>
+      </div>
+    </div>
+    <img src="pp.jpg" alt="logo1" height="130" width="130">
+    <img src="gpf.png" alt="logo2" height="120" width="260"> 
+    <span style="font-size:3rem;cursor:pointer; float:right;" onclick="openNav()">&#9776; Menu</span>
+   
     <div class="start">
         <h1 style="font-size:5rem;">Realms Of Equality</h1>
         <p style="font-size:2.5rem;"><em>A voice, access and peace for all</em></p>
@@ -47,9 +101,9 @@
     </div>
     
  
-    <h3 style="font-size:2.5rem;">Recent Articles</h3>
+    <h3  id="article" style="font-size:2.5rem;">Recent Articles</h3>
     
-   <div id="article">
+   <div>
     <div class="task">
         <p  style="font-size:1.5rem;">Task 1</p>
         <ul  style="font-size:1.5rem;">
@@ -130,7 +184,7 @@
    
    </div>
 
-   <h3 style="font-size:2.5rem;">Recent Surveys</h3>
+   <h3 id="Survey" style="font-size:2.5rem;">Recent Surveys</h3>
    <div class="task">
        <ul style="font-size:1.5rem;">
            <li>
@@ -149,7 +203,7 @@
     
    <!-- our team section -->
 
-   <div class="wrapper">
+   <div class="wrapper" id="team">
    <h3 style="font-size:2.5rem;">Our Team</h3>
     <div class="our_team">
 
@@ -271,6 +325,16 @@
  <P>ALL RIGHTS RESERVED</P>
 </div>
 
+<!-- nav script -->
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+  </script>
 
    <script>
        //Get the button
