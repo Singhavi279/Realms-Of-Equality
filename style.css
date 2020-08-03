@@ -2,6 +2,7 @@ body {
         margin: 0;
         text-align: center;
         font-family: Helvetica;
+        background: url('https://subtlepatterns.com/patterns/sativa.png');
       }
 
       *{transition:all 0.3s ease-in-out;}
