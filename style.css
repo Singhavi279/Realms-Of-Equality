@@ -14,7 +14,7 @@ body {
 .start {
         color: white;
         font-weight: 300;
-        background-image:url(top.jpg);
+        background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
         background-size: cover;
         background-attachment: fixed;
         padding: 15%;
@@ -68,6 +68,7 @@ a:hover {
 
 #contact {
       background-image: linear-gradient(to right,rgb(46, 224, 215), rgba(255,0,0,0), rgb(46, 224, 215));
+      background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
 }
 
 #myBtn {
@@ -105,3 +106,15 @@ a:hover {
        top: 0;
        width: 100%;
   }
+
+  /* testimonial */
+  .carousel-inner {
+      color: white;
+      font-weight: 500;
+      background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 10%;
+      border-radius: 3%;
+      text-align: center;
+}
