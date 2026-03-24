@@ -1,12 +1,52 @@
+:root {
+  --mat-primary-color: #6200EE;
+  --mat-primary-variant: #3700B3;
+  --mat-secondary-color: #03DAC6;
+  --mat-background-color: #FAFAFA;
+  --mat-surface-color: #FFFFFF;
+  --mat-error-color: #B00020;
+  --mat-on-primary: #FFFFFF;
+  --mat-on-secondary: #000000;
+  --mat-on-background: #000000;
+  --mat-on-surface: #000000;
+  --mat-on-error: #FFFFFF;
+
+  --mat-font-family: 'Roboto', sans-serif;
+
+  --mat-elevation-1: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  --mat-elevation-2: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  --mat-elevation-4: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  --mat-elevation-8: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
+
+  --mat-transition-standard: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
 body {
   margin: 0;
   text-align: center;
-  font-family: Helvetica;
-  background: url('https://subtlepatterns.com/patterns/sativa.png');
+  font-family: var(--mat-font-family);
+  background: var(--mat-background-color);
+  color: var(--mat-on-background);
 }
 
 * {
-  transition: all 0.3s ease-in-out;
+  transition: var(--mat-transition-standard);
+  box-sizing: border-box;
+}
+
+/* Typography Classes */
+.mat-display-3 { font-size: 3.5rem; font-weight: 400; letter-spacing: -0.01562em; line-height: 1.1; margin-bottom: 0.35em; }
+.mat-headline-4 { font-size: 2.125rem; font-weight: 400; letter-spacing: 0.01562em; line-height: 1.235; margin-bottom: 0.35em; }
+.mat-headline-5 { font-size: 1.5rem; font-weight: 400; letter-spacing: 0em; line-height: 1.334; margin-bottom: 0.35em; }
+.mat-headline-6 { font-size: 1.25rem; font-weight: 500; letter-spacing: 0.0075em; line-height: 1.6; margin-bottom: 0.35em; }
+.mat-body-1 { font-size: 1rem; font-weight: 400; letter-spacing: 0.00938em; line-height: 1.5; margin-bottom: 0.35em; }
+.center-text { text-align: center; }
+
+@media (min-width: 600px) {
+  .mat-display-3 { font-size: 4rem; }
+  .mat-headline-4 { font-size: 2.5rem; }
+  .mat-headline-5 { font-size: 2rem; }
+  .mat-headline-6 { font-size: 1.5rem; }
 }
 
 nav {
@@ -17,64 +57,142 @@ nav {
   float: left;
 }
 
+.menu-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  float: right;
+  padding: 10px;
+  color: var(--mat-on-surface);
+  border-radius: 4px;
+}
+
+.menu-icon:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
 .start {
-  color: white;
-  font-weight: 300;
-  background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 15%;
+  color: var(--mat-on-primary);
+  background-color: var(--mat-primary-color);
+  background-image: linear-gradient(135deg, var(--mat-primary-color), var(--mat-secondary-color));
+  padding: 15% 5%;
   margin-bottom: 25px;
+  box-shadow: var(--mat-elevation-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.start::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://subtlepatterns.com/patterns/sativa.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #FFFFFF, #E0E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-alt {
+  color: var(--mat-primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+.gradient-text-alt:hover {
+  color: var(--mat-secondary-color);
+}
+
+.section-title {
+  color: var(--mat-primary-color);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.mat-section {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about {
+  background-color: var(--mat-surface-color);
+  box-shadow: var(--mat-elevation-2);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .task {
   text-align: left;
-  padding-left: 7%;
-  margin-bottom: 10px;
+  background-color: var(--mat-surface-color);
+  box-shadow: var(--mat-elevation-1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-#about {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 25px;
-  text-align: left;
+.task ul {
+  padding-left: 1.5rem;
+}
+
+.task li {
+  margin-bottom: 0.5rem;
 }
 
 .button {
-  background-color: grey;
+  background-color: var(--mat-secondary-color);
+  color: var(--mat-on-secondary);
   border: none;
-  color: white;
-  padding: 10px 25px;
+  border-radius: 4px;
+  padding: 10px 24px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  margin: 8px;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  box-shadow: var(--mat-elevation-2);
 }
 
-.button1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button1:hover {
-  background-color: lightblue;
-  box-shadow: 0 12px 16px 0 rgb(221, 214, 119), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+.button:hover, .button1:hover {
+  background-color: #01b4a3;
+  box-shadow: var(--mat-elevation-4);
+  color: var(--mat-on-secondary);
 }
 
 a {
   text-decoration: none !important;
+  color: var(--mat-primary-color);
 }
 
 a:hover {
-  color: orange;
+  color: var(--mat-primary-variant);
+  text-decoration: underline !important;
 }
 
-#contact {
-  background-image: linear-gradient(to right, rgb(46, 224, 215), rgba(255, 0, 0, 0), rgb(46, 224, 215));
-  background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
+.mat-footer {
+  background-color: var(--mat-surface-color);
+  color: var(--mat-on-surface);
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  box-shadow: 0px -2px 4px -1px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 #myBtn {
@@ -83,25 +201,33 @@ a:hover {
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 1.25rem;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
+  background-color: var(--mat-primary-color);
+  color: var(--mat-on-primary);
   cursor: pointer;
-  padding: 10px;
-  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: var(--mat-elevation-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #myBtn:hover {
-  background-color: orange;
+  background-color: var(--mat-primary-variant);
+  box-shadow: var(--mat-elevation-8);
 }
 
-/* yt links */
+/* yt links & video */
 .embed-wrapper {
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
+  border-radius: 8px;
+  background-color: #000;
 }
 
 .embed-wrapper iframe {
@@ -113,14 +239,39 @@ a:hover {
   width: 100%;
 }
 
+.mat-video-shadow {
+  box-shadow: var(--mat-elevation-4);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
 /* testimonial */
 .carousel-inner {
-  color: white;
-  font-weight: 500;
-  background-image: linear-gradient(rgba(0, 255, 234, 0.795), rgba(253, 237, 11, 0.795));
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 10%;
-  border-radius: 5%;
+  background-color: var(--mat-surface-color);
+  color: var(--mat-on-surface);
+  box-shadow: var(--mat-elevation-2);
+  border-radius: 8px;
+  padding: 3rem 10%;
   text-align: center;
+}
+
+.mat-testimonial-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.mat-testimonial-text {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--mat-primary-color);
+  border-radius: 50%;
+  padding: 1.5rem;
+  background-size: 50%;
 }
