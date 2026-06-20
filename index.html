@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Scroll to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
 
   <!-- new nav -->
   <div id="myNav" class="overlay">
@@ -30,12 +30,12 @@
       <a href="#contact">Learn More</a>
     </div>
   </div>
-  <span class="menu-toggle" onclick="openNav()" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openNav(); }">&#9776; Menu</span>
+  <span class="menu-toggle" id="menuToggle" onclick="openNav()" role="button" aria-label="Open menu" aria-controls="myNav" aria-expanded="false" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openNav(); }">&#9776; Menu</span>
 
   <header class="hero-section">
     <div class="hero-logo">
-      <a href="https://singhavi279.github.io/Realms-Of-Equality/"><img src="pp.jpg" alt="Realms Of Equality Logo" height="130" width="130"></a>
-      <a href="https://www.globalpeaceindia.org/"><img src="gpf.png" alt="Global Peace Foundation Logo" height="120" width="260"></a>
+      <a href="https://singhavi279.github.io/Realms-Of-Equality/" aria-label="Visit Realms Of Equality Website"><img src="pp.jpg" alt="Realms Of Equality Logo" height="130" width="130"></a>
+      <a href="https://www.globalpeaceindia.org/" aria-label="Visit Global Peace Foundation Website"><img src="gpf.png" alt="Global Peace Foundation Logo" height="120" width="260"></a>
     </div>
     <h1 class="text-display">Realms Of Equality</h1>
     <p class="text-subtitle">A voice, access and peace for all</p>
@@ -538,11 +538,11 @@
           with work, and you respected our time. Thanks.</p>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" aria-label="Previous testimonial">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" aria-label="Next testimonial">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -680,10 +680,12 @@
   <script>
     function openNav() {
       document.getElementById("myNav").style.width = "100%";
+      document.getElementById("menuToggle").setAttribute("aria-expanded", "true");
     }
 
     function closeNav() {
       document.getElementById("myNav").style.width = "0%";
+      document.getElementById("menuToggle").setAttribute("aria-expanded", "false");
     }
   </script>
 
